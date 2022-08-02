@@ -106,8 +106,16 @@ export default {
 
     methods: {
       sendForm(){
+        axios.post('https://my-json-server.typicode.com/salvatoreolivieri/vue-3-forms/events', this.event) 
+          .then( function (output) {
+            console.log('this is the output:', output);
+          })
 
+          .catch( function (error) {
+            console.log('this is the erro:', error);
+          })
       }
+
     }
 };
 </script>
